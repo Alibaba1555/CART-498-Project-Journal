@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Corner Set UX design journal for CART 498-A.">
+  <title>Corner Set | Design Journal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <a class="project-name" href="#overview" aria-label="Corner Set home">
+      <span class="project-mark" aria-hidden="true">CS</span>
+      <span>Corner Set</span>
+    </a>
+    <div class="course-meta">
+      <span>CART 498-A</span>
+      <span>Interface Design</span>
+      <span>Fall 2026</span>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Journal navigation">
+      <nav>
+        <p class="nav-label">Project</p>
+        <a href="#overview">Overview</a>
+        <a href="#pillars">Design Pillars</a>
+        <a href="#persona">Persona</a>
+        <a href="#assumptions">User Assumptions</a>
+        <a href="#features">Features</a>
+        <a href="#flow">User Flow</a>
+        <a href="#wireframes">Wireframes</a>
+
+        <p class="nav-label">Weekly Journal</p>
+        <a href="#week-01">Week 01</a>
+        <a href="#week-02" aria-current="page">Week 02</a>
+        <a href="#week-03">Week 03</a>
+        <a href="#future-weeks">Weeks 04–12</a>
+      </nav>
+    </aside>
+
+    <main id="main-content">
+      <section class="hero" id="overview">
+        <p class="eyebrow">B2C Track · UX Design Journal</p>
+        <h1>Live music,<br>around the corner.</h1>
+        <p class="lede">
+          Corner Set is a mobile platform that helps independent musicians
+          announce spontaneous public performances and helps nearby audiences
+          discover them in real time.
+        </p>
+        <dl class="project-facts">
+          <div><dt>Current sprint</dt><dd>Performer experience</dd></div>
+          <div><dt>Current stage</dt><dd>User assumptions & wireframing</dd></div>
+          <div><dt>Last updated</dt><dd>September 15, 2026</dd></div>
+        </dl>
+      </section>
+
+      <section class="content-section" id="pillars">
+        <header class="section-heading">
+          <p class="section-number">01</p>
+          <div><p class="eyebrow">Foundation</p><h2>Design Pillars</h2></div>
+        </header>
+        <div class="card-grid four-columns">
+          <article class="card">
+            <p class="card-index">01</p>
+            <h3>Low-Friction Interaction</h3>
+            <p>Performers should be able to publish with very few actions while setting up their equipment.</p>
+          </article>
+          <article class="card">
+            <p class="card-index">02</p>
+            <h3>Clear Performance Status</h3>
+            <p>The interface should clearly show whether a performance is being configured, live, paused, or finished.</p>
+          </article>
+          <article class="card">
+            <p class="card-index">03</p>
+            <h3>Glanceable Information</h3>
+            <p>Remaining time and live status should be understandable during a quick look at the screen.</p>
+          </article>
+          <article class="card">
+            <p class="card-index">04</p>
+            <h3>Flexible Time Management</h3>
+            <p>Performers should be able to extend, pause, resume, or end a session without repeating setup.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="persona">
+        <header class="section-heading">
+          <p class="section-number">02</p>
+          <div><p class="eyebrow">Primary User</p><h2>Performer Persona</h2></div>
+        </header>
+        <article class="persona-card">
+          <div class="persona-intro">
+            <div class="persona-avatar" aria-hidden="true">A</div>
+            <div>
+              <p class="eyebrow">Independent Street Musician</p>
+              <h3>Alex, 24</h3>
+              <p>Student · Guitar and vocals · Montreal</p>
+            </div>
+          </div>
+          <blockquote>“I want people nearby to know that I’m playing, but I don’t want another complicated setup process.”</blockquote>
+          <div class="persona-columns">
+            <div>
+              <h4>Context</h4>
+              <p>Alex performs spontaneously when the location, weather, and available time feel right. The app may be used outdoors, while standing, or with one hand.</p>
+            </div>
+            <div>
+              <h4>Goals</h4>
+              <ul>
+                <li>Publish a performance in under one minute.</li>
+                <li>Show the correct location and duration.</li>
+                <li>Extend or end the session quickly.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Frustrations</h4>
+              <ul>
+                <li>Long forms while preparing equipment.</li>
+                <li>Inaccurate map pins.</li>
+                <li>Expired performances remaining live.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="assumptions">
+        <header class="section-heading">
+          <p class="section-number">03</p>
+          <div><p class="eyebrow">To Be Tested</p><h2>User Assumptions</h2></div>
+        </header>
+        <div class="note"><strong>Research status:</strong> These are initial assumptions. They have not yet been validated through user testing.</div>
+        <ul class="assumption-list">
+          <li><span>01</span>Performers want to publish their current location as quickly as possible.</li>
+          <li><span>02</span>Fixed duration presets are easier than entering a start and end time manually.</li>
+          <li><span>03</span>Performers need to see the remaining time during a live session.</li>
+          <li><span>04</span>Some performers need to pause briefly and continue the same session.</li>
+          <li><span>05</span>Users may switch between Performer and Audience roles.</li>
+          <li><span>06</span>A double-tap gesture on Profile may be difficult for first-time users to discover.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" id="features">
+        <header class="section-heading">
+          <p class="section-number">04</p>
+          <div><p class="eyebrow">Performer Side</p><h2>Feature List</h2></div>
+        </header>
+        <div class="feature-table" role="table" aria-label="Feature priorities">
+          <div class="table-row table-head" role="row">
+            <span role="columnheader">Priority</span><span role="columnheader">Feature</span><span role="columnheader">User story</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority core">Core</b></span><strong>Confirm Location</strong><span>As a performer, I want to confirm my location so the audience can find the correct place.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority core">Core</b></span><strong>Select Duration</strong><span>As a performer, I want to choose 30, 45, or 60 minutes without entering a schedule manually.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority core">Core</b></span><strong>Go Live</strong><span>As a performer, I want to publish after reviewing the essential details.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority core">Core</b></span><strong>Remaining Time</strong><span>As a performer, I want to see when my public listing will expire.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority core">Core</b></span><strong>+15 Minutes</strong><span>As a performer, I want to extend the current performance without publishing again.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority test">Test</b></span><strong>Pause / Resume</strong><span>As a performer, I want to reflect a short break without ending the entire session.</span>
+          </div>
+          <div class="table-row" role="row">
+            <span><b class="priority test">Test</b></span><strong>Role Switching</strong><span>As a user, I want to change between Performer and Audience modes.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="flow">
+        <header class="section-heading">
+          <p class="section-number">05</p>
+          <div><p class="eyebrow">Task Structure</p><h2>Core User Flow</h2></div>
+        </header>
+        <ol class="flow-list">
+          <li><span>01</span><div><strong>Enter Performer Mode</strong><p>The main navigation action becomes “Start a Performance.”</p></div></li>
+          <li><span>02</span><div><strong>Confirm Location</strong><p>The app detects the current position; the performer confirms or adjusts the pin.</p></div></li>
+          <li><span>03</span><div><strong>Select Duration</strong><p>The performer chooses 30, 45, or 60 minutes.</p></div></li>
+          <li><span>04</span><div><strong>Review and Go Live</strong><p>The location and duration are confirmed before publication.</p></div></li>
+          <li><span>05</span><div><strong>Manage the Session</strong><p>The live screen shows remaining time with options to add 15 minutes, pause, or end.</p></div></li>
+          <li><span>06</span><div><strong>End Automatically or Manually</strong><p>The public pin is removed when the performer ends the session or the timer reaches zero.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="content-section" id="wireframes">
+        <header class="section-heading">
+          <p class="section-number">06</p>
+          <div><p class="eyebrow">Early Exploration</p><h2>Wireframes</h2></div>
+        </header>
+        <p class="section-intro">Replace each placeholder with an exported image from Figma and update the caption with the design question being explored.</p>
+        <div class="wireframe-grid">
+          <figure><div class="image-placeholder"><span>01</span>Performer Home</div><figcaption>Entry point for starting a performance.</figcaption></figure>
+          <figure><div class="image-placeholder"><span>02</span>Location</div><figcaption>Confirm or adjust the current map pin.</figcaption></figure>
+          <figure><div class="image-placeholder"><span>03</span>Duration</div><figcaption>Select a fixed performance duration.</figcaption></figure>
+          <figure><div class="image-placeholder"><span>04</span>Live Session</div><figcaption>View time, extend, pause, or end.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="content-section journal" id="week-01">
+        <header class="journal-heading">
+          <div><p class="eyebrow">September 8, 2026</p><h2>Week 01</h2></div>
+          <span>Course Introduction</span>
+        </header>
+        <div class="journal-body">
+          <h3>Decision</h3>
+          <p>I selected the B2C track and began examining how Corner Set serves both performers and audience members within one application.</p>
+          <h3>Initial Direction</h3>
+          <p>I am interested in the contrast between discovering nearby music and publishing a performance. The two roles share one platform but have different immediate goals.</p>
+        </div>
+      </section>
+
+      <section class="content-section journal" id="week-02">
+        <header class="journal-heading">
+          <div><p class="eyebrow">September 15, 2026</p><h2>Week 02</h2></div>
+          <span>User Assumptions & Wireframing</span>
+        </header>
+        <div class="journal-body two-column-copy">
+          <div>
+            <h3>Production Brief</h3>
+            <p>This sprint focuses strictly on the performer side. The setup should let an artist confirm a location, select a timer, and publish in very few actions.</p>
+            <h3>Design Question</h3>
+            <p>How might Corner Set allow a street performer to publish and manage a live performance quickly while setting up equipment?</p>
+          </div>
+          <div>
+            <h3>Current Concept</h3>
+            <p>The bottom navigation changes according to the active role. In Performer mode, its central action starts a performance. During a live session, a large circular control shows the remaining time and provides access to pause and resume.</p>
+            <h3>Next Step</h3>
+            <p>Create grayscale wireframes and test whether users can confirm location, choose a duration, go live, add 15 minutes, and end the session without guidance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section journal placeholder-entry" id="week-03">
+        <header class="journal-heading">
+          <div><p class="eyebrow">September 22, 2026</p><h2>Week 03</h2></div>
+          <span>Prototyping & Test Preparation</span>
+        </header>
+        <div class="journal-body"><p>Add the clickable prototype, testing tasks, survey questions, and expected success measures here.</p></div>
+      </section>
+
+      <section class="content-section" id="future-weeks">
+        <header class="section-heading">
+          <p class="section-number">→</p>
+          <div><p class="eyebrow">Upcoming</p><h2>Weeks 04–12</h2></div>
+        </header>
+        <div class="week-grid">
+          <article><span>04</span><h3>Design Review 01</h3><p>Test findings and interface fundamentals.</p></article>
+          <article><span>05</span><h3>Design System</h3><p>Components and reusable interface rules.</p></article>
+          <article><span>06</span><h3>Motion</h3><p>Interaction feedback and state changes.</p></article>
+          <article><span>07</span><h3>Design Review 02</h3><p>Evidence and iteration decisions.</p></article>
+          <article><span>08</span><h3>Friction</h3><p>Drop-off points and simplification.</p></article>
+          <article><span>09</span><h3>A/B Testing</h3><p>Variants and quantitative data.</p></article>
+          <article><span>10</span><h3>Design Review 03</h3><p>Accessibility and final findings.</p></article>
+          <article><span>11–12</span><h3>Finalization</h3><p>Final prototype, report, and showcase.</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Corner Set · CART 498-A Design Journal</p>
+    <a href="#overview">Back to top ↑</a>
+  </footer>
+</body>
+</html>
