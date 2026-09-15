@@ -272,14 +272,40 @@ h3 { line-height: 1.25; }
 .card h3 { max-width: 260px; margin-top: 3rem; font-size: 1.35rem; }
 .card p:last-child { max-width: 390px; color: var(--muted); }
 
+.persona-carousel { position: relative; }
+.persona-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.persona-toolbar p { margin: 0; color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
+.persona-toolbar p strong { color: var(--accent); font-size: 1.25rem; }
+.persona-controls { display: flex; gap: .5rem; }
+.persona-arrow { width: 48px; height: 48px; padding: 0; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); background: transparent; font: inherit; font-size: 1.25rem; cursor: pointer; transition: color .18s ease, background .18s ease, transform .18s ease; }
+.persona-arrow:hover { color: white; background: var(--ink); transform: translateY(-2px); }
+.persona-arrow:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.persona-slides { min-height: 570px; }
 .persona-card { color: white; background: var(--dark); }
+.persona-slide.is-active { animation: persona-in .32s ease both; }
+.persona-slide[hidden] { display: none; }
 .persona-intro { display: flex; align-items: center; gap: 1.4rem; padding: 2.5rem; }
 .persona-intro p:last-child { margin: 0; color: #bcbdb6; }
 .persona-avatar { display: grid; flex: 0 0 92px; height: 92px; place-items: center; color: var(--ink); background: var(--accent); border-radius: 50%; font-size: 2.2rem; font-weight: 900; }
+.avatar-maya { background: #ffc857; }
+.avatar-sofia { background: #83d8c7; }
 .persona-card blockquote { margin: 0; padding: 2.5rem; border-block: 1px solid #474842; font-size: clamp(1.4rem, 3vw, 2.4rem); line-height: 1.3; }
 .persona-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding: 2.5rem; }
 .persona-columns h4 { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
 .persona-columns p, .persona-columns li { color: #d0d1ca; }
+.persona-implication { display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; padding: 1.35rem 2.5rem; border-top: 1px solid #474842; background: #292a26; }
+.persona-implication span { color: var(--accent); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.persona-implication p { margin: 0; color: #e0e1da; }
+.persona-dots { display: flex; justify-content: center; gap: .55rem; padding-top: 1.2rem; }
+.persona-dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: var(--line); cursor: pointer; transition: width .18s ease, border-radius .18s ease, background .18s ease; }
+.persona-dots button.is-active { width: 28px; border-radius: 10px; background: var(--accent); }
+.persona-dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.persona-research-note { max-width: 720px; margin: 1.3rem auto 0; color: var(--muted); text-align: center; font-size: .78rem; }
+
+@keyframes persona-in {
+  from { opacity: 0; transform: translateX(14px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
 .note { margin-bottom: 2rem; padding: 1rem 1.2rem; background: var(--accent-soft); border-left: 5px solid var(--accent); }
 .assumption-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
@@ -332,6 +358,7 @@ footer p { margin: 0; }
   .sidebar a { padding: .55rem .8rem; }
   .course-meta span:not(:first-child) { display: none; }
   .persona-columns, .two-column-copy { grid-template-columns: 1fr; }
+  .persona-slides { min-height: 0; }
   .table-row { grid-template-columns: 80px 150px 1fr; }
   .hero { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
   .live-radar { width: min(65vw, 360px); }
@@ -349,6 +376,7 @@ footer p { margin: 0; }
   .persona-intro { align-items: flex-start; padding: 1.5rem; }
   .persona-avatar { flex-basis: 64px; height: 64px; }
   .persona-card blockquote, .persona-columns { padding: 1.5rem; }
+  .persona-implication { grid-template-columns: 1fr; gap: .4rem; padding: 1.2rem 1.5rem; }
   .table-head { display: none; }
   .table-row { grid-template-columns: 1fr; gap: .45rem; }
   .journal-heading { display: block; }

@@ -90,41 +90,142 @@
       <section class="content-section" id="persona">
         <header class="section-heading">
           <p class="section-number">02</p>
-          <div><p class="eyebrow">Primary User</p><h2>Performer Persona</h2></div>
+          <div><p class="eyebrow">Primary, Secondary & Future Users</p><h2>User Personas</h2></div>
         </header>
-        <article class="persona-card">
-          <div class="persona-intro">
-            <div class="persona-avatar" aria-hidden="true">A</div>
-            <div>
-              <p class="eyebrow">Independent Street Musician</p>
-              <h3>Alex, 24</h3>
-              <p>Student · Guitar and vocals · Montreal</p>
+
+        <div class="persona-carousel" data-persona-carousel>
+          <div class="persona-toolbar">
+            <p id="persona-status" aria-live="polite"><strong>01</strong> / 03</p>
+            <div class="persona-controls">
+              <button class="persona-arrow" type="button" data-persona-prev aria-label="Previous persona" aria-controls="persona-slides">←</button>
+              <button class="persona-arrow" type="button" data-persona-next aria-label="Next persona" aria-controls="persona-slides">→</button>
             </div>
           </div>
-          <blockquote>“I want people nearby to know that I’m playing, but I don’t want another complicated setup process.”</blockquote>
-          <div class="persona-columns">
-            <div>
-              <h4>Context</h4>
-              <p>Alex performs spontaneously when the location, weather, and available time feel right. The app may be used outdoors, while standing, or with one hand.</p>
-            </div>
-            <div>
-              <h4>Goals</h4>
-              <ul>
-                <li>Publish a performance in under one minute.</li>
-                <li>Show the correct location and duration.</li>
-                <li>Extend or end the session quickly.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Frustrations</h4>
-              <ul>
-                <li>Long forms while preparing equipment.</li>
-                <li>Inaccurate map pins.</li>
-                <li>Expired performances remaining live.</li>
-              </ul>
-            </div>
+
+          <div id="persona-slides" class="persona-slides">
+            <article class="persona-card persona-slide is-active" data-persona-slide aria-hidden="false">
+              <div class="persona-intro">
+                <div class="persona-avatar" aria-hidden="true">A</div>
+                <div>
+                  <p class="eyebrow">Primary Persona · Spontaneous Performer</p>
+                  <h3>Alex, 24</h3>
+                  <p>Student · Guitar and vocals · Montreal</p>
+                </div>
+              </div>
+              <blockquote>“I want people nearby to know that I’m playing, but I don’t want another complicated setup process.”</blockquote>
+              <div class="persona-columns">
+                <div>
+                  <h4>Context</h4>
+                  <p>Alex performs spontaneously when the location, weather, and available time feel right. The app may be used outdoors, while standing, or with one hand.</p>
+                </div>
+                <div>
+                  <h4>Goals</h4>
+                  <ul>
+                    <li>Publish a performance in under one minute.</li>
+                    <li>Show the correct location and duration.</li>
+                    <li>Extend or end the session quickly.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Frustrations</h4>
+                  <ul>
+                    <li>Long forms while preparing equipment.</li>
+                    <li>Inaccurate map pins.</li>
+                    <li>Expired performances remaining live.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona-implication">
+                <span>Design implication</span>
+                <p>Prioritize a short setup flow, large controls, and clear confirmation that the performance is live.</p>
+              </div>
+            </article>
+
+            <article class="persona-card persona-slide" data-persona-slide aria-hidden="true" hidden>
+              <div class="persona-intro">
+                <div class="persona-avatar avatar-maya" aria-hidden="true">M</div>
+                <div>
+                  <p class="eyebrow">Secondary Persona · Experienced Busker</p>
+                  <h3>Maya, 31</h3>
+                  <p>Independent musician · Violin and loop station · Montreal</p>
+                </div>
+              </div>
+              <blockquote>“My location can change at the last minute. Updating the audience should take seconds.”</blockquote>
+              <div class="persona-columns">
+                <div>
+                  <h4>Context</h4>
+                  <p>Maya performs three or four times per week and has a small local following. Weather, noise, crowds, or local restrictions may force her to move.</p>
+                </div>
+                <div>
+                  <h4>Goals</h4>
+                  <ul>
+                    <li>Reach followers and nearby listeners.</li>
+                    <li>Correct the location when plans change.</li>
+                    <li>Extend a successful performance quickly.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Frustrations</h4>
+                  <ul>
+                    <li>Repeating the same details every session.</li>
+                    <li>Posting updates across several platforms.</li>
+                    <li>People arriving after the set has ended.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona-implication">
+                <span>Design implication</span>
+                <p>Save reusable profile details and keep location editing, +15 minutes, and End Performance directly accessible.</p>
+              </div>
+            </article>
+
+            <article class="persona-card persona-slide" data-persona-slide aria-hidden="true" hidden>
+              <div class="persona-intro">
+                <div class="persona-avatar avatar-sofia" aria-hidden="true">S</div>
+                <div>
+                  <p class="eyebrow">Future Persona · Nearby Listener</p>
+                  <h3>Sofia, 22</h3>
+                  <p>University student · Music enthusiast · Montreal</p>
+                </div>
+              </div>
+              <blockquote>“Before I start walking, I need to know the performance is still happening.”</blockquote>
+              <div class="persona-columns">
+                <div>
+                  <h4>Context</h4>
+                  <p>Sofia enjoys discovering local music while walking downtown but rarely knows when or where spontaneous performances are happening.</p>
+                </div>
+                <div>
+                  <h4>Goals</h4>
+                  <ul>
+                    <li>Find performances within walking distance.</li>
+                    <li>See distance and remaining time quickly.</li>
+                    <li>Follow musicians she discovers.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Frustrations</h4>
+                  <ul>
+                    <li>Outdated or inaccurate event information.</li>
+                    <li>Walking to a performance that has ended.</li>
+                    <li>Receiving too many notifications.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona-implication">
+                <span>Design implication</span>
+                <p>Show accurate distance, time, and live status; update changes immediately and remove expired performance pins.</p>
+              </div>
+            </article>
           </div>
-        </article>
+
+          <div class="persona-dots" aria-label="Select persona">
+            <button class="is-active" type="button" data-persona-dot="0" aria-label="Show Alex" aria-pressed="true"></button>
+            <button type="button" data-persona-dot="1" aria-label="Show Maya" aria-pressed="false"></button>
+            <button type="button" data-persona-dot="2" aria-label="Show Sofia" aria-pressed="false"></button>
+          </div>
+
+          <p class="persona-research-note"><strong>Research status:</strong> These personas represent initial behavioral assumptions and will be revised after user testing.</p>
+        </div>
       </section>
 
       <section class="content-section" id="assumptions">
@@ -270,5 +371,44 @@
     <p>Corner Set · CART 498-A Design Journal</p>
     <a href="#overview">Back to top ↑</a>
   </footer>
+  <script>
+    (() => {
+      const carousel = document.querySelector('[data-persona-carousel]');
+      if (!carousel) return;
+
+      const slides = [...carousel.querySelectorAll('[data-persona-slide]')];
+      const dots = [...carousel.querySelectorAll('[data-persona-dot]')];
+      const status = carousel.querySelector('#persona-status');
+      let activeIndex = 0;
+
+      function showPersona(index) {
+        activeIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === activeIndex;
+          slide.hidden = !isActive;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', String(!isActive));
+        });
+
+        dots.forEach((dot, dotIndex) => {
+          const isActive = dotIndex === activeIndex;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-pressed', String(isActive));
+        });
+
+        status.innerHTML = `<strong>${String(activeIndex + 1).padStart(2, '0')}</strong> / ${String(slides.length).padStart(2, '0')}`;
+      }
+
+      carousel.querySelector('[data-persona-prev]').addEventListener('click', () => showPersona(activeIndex - 1));
+      carousel.querySelector('[data-persona-next]').addEventListener('click', () => showPersona(activeIndex + 1));
+      dots.forEach((dot, index) => dot.addEventListener('click', () => showPersona(index)));
+
+      carousel.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft') showPersona(activeIndex - 1);
+        if (event.key === 'ArrowRight') showPersona(activeIndex + 1);
+      });
+    })();
+  </script>
 </body>
 </html>
