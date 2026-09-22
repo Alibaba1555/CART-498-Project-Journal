@@ -6,6 +6,16 @@
   <meta name="description" content="Corner Set UX design journal for CART 498-A.">
   <title>Corner Set | Design Journal</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .prototype-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+    .prototype-gallery figure { margin: 0; min-width: 0; }
+    .prototype-gallery a { display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .prototype-gallery a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .prototype-gallery img { display: block; width: 100%; height: auto; }
+    .prototype-gallery figcaption { margin-top: .8rem; color: var(--muted); line-height: 1.65; }
+    .prototype-gallery figcaption strong { color: var(--ink); }
+    @media (max-width: 700px) { .prototype-gallery { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -45,8 +55,8 @@
 
         <p class="nav-label">Weekly Journal</p>
         <a href="#week-01">Week 01</a>
-        <a href="#week-02" aria-current="page">Week 02</a>
-        <a href="#week-03">Week 03</a>
+        <a href="#week-02">Week 02</a>
+        <a href="#week-03" aria-current="page">Week 03</a>
         <a href="#future-weeks">Weeks 04–12</a>
       </nav>
     </aside>
@@ -62,8 +72,8 @@
         </p>
         <dl class="project-facts">
           <div><dt>Current sprint</dt><dd>Performer experience</dd></div>
-          <div><dt>Current stage</dt><dd>User assumptions & wireframing</dd></div>
-          <div><dt>Last updated</dt><dd>September 15, 2026</dd></div>
+          <div><dt>Current stage</dt><dd>Initial prototype</dd></div>
+          <div><dt>Last updated</dt><dd>September 22, 2026</dd></div>
         </dl>
       </section>
 
@@ -349,12 +359,31 @@
         </div>
       </section>
 
-      <section class="content-section journal placeholder-entry" id="week-03">
+      <section class="content-section journal" id="week-03">
         <header class="journal-heading">
           <div><p class="eyebrow">September 22, 2026</p><h2>Week 03</h2></div>
-          <span>Prototyping & Test Preparation</span>
+          <span>Building the First Prototype</span>
         </header>
-        <div class="journal-body"><p>Add the clickable prototype, testing tasks, survey questions, and expected success measures here.</p></div>
+        <div class="journal-body">
+          <h3>Building the First Prototype</h3>
+          <p>This week, I created an initial prototype of Corner Set, my platform for connecting street performers with nearby audiences. I focused mainly on the performer side, exploring how someone could start a set and manage their performance time through a simple interface.</p>
+          <h3>Performer Flow</h3>
+          <p>The current flow moves from a home screen to a setup page, where the performer can choose a duration of 30, 45, or 60 minutes. During the set, a large circular timer displays the remaining time, with options to add another 15 minutes or end the performance. I wanted the main information and controls to be easy to read at a glance, since performers should be able to focus on their music without constantly interacting with their phones.</p>
+          <h3>Visual Direction &amp; Prototype States</h3>
+          <p>Visually, I explored a light background with soft blue and green accents. The timer has an organic shape around it, which introduces a sense of movement into an otherwise minimal interface. I also included an offline simulation to explore how the app communicates connection problems. At this stage, the map is illustrative, publishing and syncing are simulated, and the tip jar is only a placeholder.</p>
+          <h3>Reflection</h3>
+          <p>Working on this prototype helped me think more carefully about the different states of a performance: preparing, going live, extending the session, and finishing. It also raised a question about location: the current design shows an approximate public area, but I still need to consider whether that gives audiences enough information to find a performer.</p>
+          <h3>Next Steps — 3D Map &amp; Audience Experience</h3>
+          <p>Next, I would like to experiment with a 3D map and develop the audience side of the platform. Possible features include finding nearby performances, viewing performer profiles, and checking how much time remains in a set. I want to explore whether a 3D view makes discovering performances more intuitive while keeping the interface easy to navigate. My next step is to connect these audience interactions with the performer flow and see how the two experiences work together.</p>
+          <h3>Prototype Screens</h3>
+          <p>Select a screenshot to view it at full size.</p>
+        </div>
+        <div class="prototype-gallery">
+          <figure><a href="assets/3w1.png" target="_blank" rel="noopener" aria-label="View performer home screenshot at full size (opens in a new tab)"><img src="assets/3w1.png" alt="Corner Set prototype: Starting a set from the home screen and viewing an approximate public area." loading="lazy" width="2048" height="1118"></a><figcaption><strong>01 — Performer Home</strong><br>Starting a set from the home screen and viewing an approximate public area.</figcaption></figure>
+          <figure><a href="assets/3w2.png" target="_blank" rel="noopener" aria-label="View set duration screenshot at full size (opens in a new tab)"><img src="assets/3w2.png" alt="Corner Set prototype: Choosing a performance duration of 30, 45, or 60 minutes." loading="lazy" width="2048" height="1118"></a><figcaption><strong>02 — Set Duration</strong><br>Choosing a performance duration of 30, 45, or 60 minutes.</figcaption></figure>
+          <figure><a href="assets/3w3.png" target="_blank" rel="noopener" aria-label="View live session screenshot at full size (opens in a new tab)"><img src="assets/3w3.png" alt="Corner Set prototype: Checking remaining time, adding 15 minutes, and ending a set." loading="lazy" width="2048" height="1118"></a><figcaption><strong>03 — Live Session</strong><br>Checking remaining time, adding 15 minutes, and ending a set.</figcaption></figure>
+          <figure><a href="assets/3w4.png" target="_blank" rel="noopener" aria-label="View offline state screenshot at full size (opens in a new tab)"><img src="assets/3w4.png" alt="Corner Set prototype: Communicating a connection problem before publishing a new set." loading="lazy" width="2048" height="1118"></a><figcaption><strong>04 — Offline State</strong><br>Communicating a connection problem before publishing a new set.</figcaption></figure>
+        </div>
       </section>
 
       <section class="content-section" id="future-weeks">
