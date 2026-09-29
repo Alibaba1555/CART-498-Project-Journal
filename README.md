@@ -1,1 +1,0 @@
-# CART-498-Project-Journal
