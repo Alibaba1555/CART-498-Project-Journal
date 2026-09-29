@@ -56,8 +56,9 @@
         <p class="nav-label">Weekly Journal</p>
         <a href="#week-01">Week 01</a>
         <a href="#week-02">Week 02</a>
-        <a href="#week-03" aria-current="page">Week 03</a>
-        <a href="#future-weeks">Weeks 04–12</a>
+        <a href="#week-03">Week 03</a>
+        <a href="#week-04" aria-current="page">Week 04</a>
+        <a href="#future-weeks">Weeks 05–12</a>
       </nav>
     </aside>
 
@@ -71,9 +72,9 @@
           discover them in real time.
         </p>
         <dl class="project-facts">
-          <div><dt>Current sprint</dt><dd>Performer experience</dd></div>
-          <div><dt>Current stage</dt><dd>Initial prototype</dd></div>
-          <div><dt>Last updated</dt><dd>September 22, 2026</dd></div>
+          <div><dt>Current sprint</dt><dd>Performer &amp; audience experience</dd></div>
+          <div><dt>Current stage</dt><dd>Interactive prototype iteration</dd></div>
+          <div><dt>Last updated</dt><dd>September 29, 2026</dd></div>
         </dl>
       </section>
 
@@ -386,13 +387,41 @@
         </div>
       </section>
 
+      <section class="content-section journal" id="week-04">
+        <header class="journal-heading">
+          <div><p class="eyebrow">September 29, 2026</p><h2>Week 04</h2></div>
+          <span>Day &amp; Night Modes and the Audience Experience</span>
+        </header>
+        <div class="journal-body">
+          <h3>Responding to Client Requirements</h3>
+          <p>This week, I expanded the Corner Set prototype based on the client's requirements. I added day and night display modes, developed the audience side, and added a tipping page. These updates connect the performer flow from last week with the experience of someone discovering and supporting a nearby performance.</p>
+          <h3>Day &amp; Night Modes</h3>
+          <p>I added an appearance toggle in the profile page so users can switch between a light daytime view and a darker nighttime view. Both modes keep the same layout and controls, while the background, text, and accent colours change. My aim is to make the interface suitable for different lighting conditions without making users relearn how to navigate it. I still need to test readability outdoors and after dark.</p>
+          <h3>Audience Experience &amp; 3D Map</h3>
+          <p>I also added an Audience mode, which users can access by double-tapping the profile avatar. The map uses grey and white 3D buildings, a blue marker for the listener's position, and red signals for nearby performances. The expanding red rings indicate approximate performance areas. The audience page shows the performer's information, distance, and remaining performance time, helping listeners decide which set to approach.</p>
+          <h3>Simulating a Walk &amp; Automatic Connection</h3>
+          <p>The prototype can now simulate an audience member walking toward a performer. Using the testing controls, I can select a performance and move the listener's position closer to it. When the listener enters the nearby area, the interface automatically connects to that performance. This lets me explore the transition from discovering music on the map to viewing the performance's details without asking the listener to manually join. The movement and connection use demo positions rather than live GPS or audio streaming.</p>
+          <h3>Tipping Flow</h3>
+          <p>I added a tipping page so the audience experience can continue from finding a performance to supporting the musician. The audience card includes a “Leave a tip” action, which becomes available after connecting nearby. The payment interaction is simulated at this stage; the focus is on the steps and feedback that make supporting a performer understandable.</p>
+          <!-- <h3>Reflection &amp; Next Steps</h3>
+          <p>Developing the audience side made me think more carefully about how the app communicates changes in location and connection status. Automatic connection may reduce the number of actions, but the interface needs to make it clear which performance the listener has joined. My next step is to test whether classmates understand the blue and red map markers, notice when they connect, and can find the tipping action. I also want to check whether double-tapping the avatar is easy to discover and how the interface should behave when several performances are close together.</p> -->
+          <h3>Prototype Screens</h3>
+          <p>Select a screenshot to view it at full size.</p>
+        </div>
+        <div class="prototype-gallery">
+          <figure><a href="assets/4w1.png" target="_blank" rel="noopener" aria-label="View Day Mode screenshot at full size (opens in a new tab)"><img src="assets/4w1.png" alt="The profile page with a light appearance and the night-mode toggle switched off." loading="lazy" width="2047" height="1105"></a><figcaption><strong>01 — Day Mode</strong><br>The profile page with a light appearance and the night-mode toggle switched off.</figcaption></figure>
+          <figure><a href="assets/4w2.png" target="_blank" rel="noopener" aria-label="View Night Mode screenshot at full size (opens in a new tab)"><img src="assets/4w2.png" alt="The same profile layout with dark surfaces, lighter text, and the night-mode toggle switched on." loading="lazy" width="2047" height="1111"></a><figcaption><strong>02 — Night Mode</strong><br>The same profile layout with dark surfaces, lighter text, and the night-mode toggle switched on.</figcaption></figure>
+          <figure><a href="assets/4w3.png" target="_blank" rel="noopener" aria-label="View 3D Performance Map screenshot at full size (opens in a new tab)"><img src="assets/4w3.png" alt="An illustrative neighbourhood with an approximate performance area and a fourth-floor signal." loading="lazy" width="2048" height="1099"></a><figcaption><strong>03 — 3D Performance Map</strong><br>An illustrative neighbourhood with an approximate performance area and a fourth-floor signal.</figcaption></figure>
+          <figure><a href="assets/4w4.png" target="_blank" rel="noopener" aria-label="View Audience &amp; Automatic Connection screenshot at full size (opens in a new tab)"><img src="assets/4w4.png" alt="The listener view with nearby performances, remaining time, a tipping entry point, and controls for simulating a walk." loading="lazy" width="2048" height="1104"></a><figcaption><strong>04 — Audience &amp; Automatic Connection</strong><br>The listener view with nearby performances, remaining time, a tipping entry point, and controls for simulating a walk.</figcaption></figure>
+        </div>
+      </section>
+
       <section class="content-section" id="future-weeks">
         <header class="section-heading">
           <p class="section-number">→</p>
-          <div><p class="eyebrow">Upcoming</p><h2>Weeks 04–12</h2></div>
+          <div><p class="eyebrow">Upcoming</p><h2>Weeks 05–12</h2></div>
         </header>
         <div class="week-grid">
-          <article><span>04</span><h3>Design Review 01</h3><p>Test findings and interface fundamentals.</p></article>
           <article><span>05</span><h3>Design System</h3><p>Components and reusable interface rules.</p></article>
           <article><span>06</span><h3>Motion</h3><p>Interaction feedback and state changes.</p></article>
           <article><span>07</span><h3>Design Review 02</h3><p>Evidence and iteration decisions.</p></article>
