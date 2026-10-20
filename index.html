@@ -51,14 +51,15 @@
         <a href="#assumptions">User Assumptions</a>
         <a href="#features">Features</a>
         <a href="#flow">User Flow</a>
-        <a href="#wireframes">Wireframes</a>
+        <a href="#prototype">Current Prototype</a>
 
         <p class="nav-label">Weekly Journal</p>
         <a href="#week-01">Week 01</a>
         <a href="#week-02">Week 02</a>
         <a href="#week-03">Week 03</a>
-        <a href="#week-04" aria-current="page">Week 04</a>
-        <a href="#future-weeks">Weeks 05–12</a>
+        <a href="#week-04">Week 04</a>
+        <a href="#week-05" aria-current="page">Week 05</a>
+        <a href="#next-steps">Next Steps</a>
       </nav>
     </aside>
 
@@ -72,9 +73,9 @@
           discover them in real time.
         </p>
         <dl class="project-facts">
-          <div><dt>Current sprint</dt><dd>Performer &amp; audience experience</dd></div>
+          <div><dt>Current sprint</dt><dd>Audience discovery &amp; tipping</dd></div>
           <div><dt>Current stage</dt><dd>Interactive prototype iteration</dd></div>
-          <div><dt>Last updated</dt><dd>September 29, 2026</dd></div>
+          <div><dt>Last updated</dt><dd>October 20, 2026</dd></div>
         </dl>
       </section>
 
@@ -267,7 +268,7 @@
       <section class="content-section" id="features">
         <header class="section-heading">
           <p class="section-number">04</p>
-          <div><p class="eyebrow">Performer Side</p><h2>Feature List</h2></div>
+          <div><p class="eyebrow">Performer &amp; Audience</p><h2>Feature List</h2></div>
         </header>
         <div class="feature-table" role="table" aria-label="Feature priorities">
           <div class="table-row table-head" role="row">
@@ -294,6 +295,11 @@
           <div class="table-row" role="row">
             <span><b class="priority test">Test</b></span><strong>Role Switching</strong><span>As a user, I want to change between Performer and Audience modes.</span>
           </div>
+<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Nearby Discovery</strong><span>Filter demo performances from 50 to 300 metres, or select All. Nearby Leo and Nina markers group together when zoomed out.</span></div>
+<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Musician Profiles</strong><span>Read short bios, scan genre tags, and open sample Instagram links.</span></div>
+<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>15-Second Preview</strong><span>Listen to a prerecorded sample on Alex&#x27;s card before deciding to walk over.</span></div>
+<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Quick Tipping</strong><span>Choose a tip and complete an Apple Pay-style interaction with simulated Face ID feedback.</span></div>
+<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Visual Map Alerts</strong><span>Red expanding rings draw attention to performance areas while the map is open. Push notifications are not implemented.</span></div>
         </div>
       </section>
 
@@ -304,7 +310,7 @@
         </header>
         <ol class="flow-list">
           <li><span>01</span><div><strong>Enter Performer Mode</strong><p>The main navigation action becomes “Start a Performance.”</p></div></li>
-          <li><span>02</span><div><strong>Confirm Location</strong><p>The app detects the current position; the performer confirms or adjusts the pin.</p></div></li>
+          <li><span>02</span><div><strong>Confirm Location</strong><p>The current prototype uses a simulated location. Live location detection remains a future implementation.</p></div></li>
           <li><span>03</span><div><strong>Select Duration</strong><p>The performer chooses 30, 45, or 60 minutes.</p></div></li>
           <li><span>04</span><div><strong>Review and Go Live</strong><p>The location and duration are confirmed before publication.</p></div></li>
           <li><span>05</span><div><strong>Manage the Session</strong><p>The live screen shows remaining time with options to add 15 minutes, pause, or end.</p></div></li>
@@ -312,18 +318,14 @@
         </ol>
       </section>
 
-      <section class="content-section" id="wireframes">
-        <header class="section-heading">
-          <p class="section-number">06</p>
-          <div><p class="eyebrow">Early Exploration</p><h2>Wireframes</h2></div>
-        </header>
-        <p class="section-intro">Replace each placeholder with an exported image from Figma and update the caption with the design question being explored.</p>
-        <div class="wireframe-grid">
-          <figure><div class="image-placeholder"><span>01</span>Performer Home</div><figcaption>Entry point for starting a performance.</figcaption></figure>
-          <figure><div class="image-placeholder"><span>02</span>Location</div><figcaption>Confirm or adjust the current map pin.</figcaption></figure>
-          <figure><div class="image-placeholder"><span>03</span>Duration</div><figcaption>Select a fixed performance duration.</figcaption></figure>
-          <figure><div class="image-placeholder"><span>04</span>Live Session</div><figcaption>View time, extend, pause, or end.</figcaption></figure>
+      <section class="content-section" id="prototype">
+        <header class="section-heading"><p class="section-number">06</p><div><p class="eyebrow">Working Interaction</p><h2>Current Prototype</h2></div></header>
+        <p class="section-intro">The project has moved from early screen planning to a working browser prototype. The weekly entries below document the interface and the changes made along the way.</p>
+        <div class="card-grid">
+          <article class="card"><h3>Performer</h3><p>Start a set, choose a duration, and manage the remaining performance time.</p></article>
+          <article class="card"><h3>Audience</h3><p>Browse the map, adjust the distance range, open a musician's card, listen to Alex's preview, and simulate a tip after connecting nearby.</p></article>
         </div>
+        <p class="note">Locations, walking, and payments are simulated. The preview plays a prerecorded audio file. Screenshots and design decisions are documented in <a href="#week-05">Week 05</a>.</p>
       </section>
 
       <section class="content-section journal" id="week-01">
@@ -416,20 +418,38 @@
         </div>
       </section>
 
-      <section class="content-section" id="future-weeks">
-        <header class="section-heading">
-          <p class="section-number">→</p>
-          <div><p class="eyebrow">Upcoming</p><h2>Weeks 05–12</h2></div>
-        </header>
-        <div class="week-grid">
-          <article><span>05</span><h3>Design System</h3><p>Components and reusable interface rules.</p></article>
-          <article><span>06</span><h3>Motion</h3><p>Interaction feedback and state changes.</p></article>
-          <article><span>07</span><h3>Design Review 02</h3><p>Evidence and iteration decisions.</p></article>
-          <article><span>08</span><h3>Friction</h3><p>Drop-off points and simplification.</p></article>
-          <article><span>09</span><h3>A/B Testing</h3><p>Variants and quantitative data.</p></article>
-          <article><span>10</span><h3>Design Review 03</h3><p>Accessibility and final findings.</p></article>
-          <article><span>11–12</span><h3>Finalization</h3><p>Final prototype, report, and showcase.</p></article>
+      <section class="content-section journal" id="week-05">
+        <header class="journal-heading"><div><p class="eyebrow">Updated October 20, 2026</p><h2>Week 05</h2></div><span>Finding Music &amp; Supporting Musicians</span></header>
+        <div class="journal-body">
+          <h3>Working with the New Requests</h3>
+          <p>For this update, I focused on what an audience member needs before choosing a performance: how far away it is, what it sounds like, and who is playing. The client also wanted a quicker way to tip. I built on the existing map and performance cards so these additions would fit into the same browsing experience.</p>
+          <h3>A Smaller Distance Filter</h3>
+          <p>I first tried separate distance buttons, then changed them to a compact slider above the map. The range now runs from 50 to 300 metres, with All at the end. I reduced the upper limit from 500 metres because the demo performances are closer together. The slider takes up less space, although I still need to check whether people notice the All option.</p>
+          <p>I also added Nina near Leo to explore what happens when two musicians perform close together. When zoomed out, their markers combine into a red dot labelled 2. Clicking it zooms in and reveals the separate markers. This gives me a small example of how to keep a busy map readable.</p>
+          <h3>Giving the Musicians More Personality</h3>
+          <p>The performance cards now include genre tags, a short Behind the Sound introduction, and an Instagram link. I wanted the bios to sound like something a person would actually write. Mika uses lots of emoji, Leo is more casual, and Alex's introduction is simply about liking peanut butter sandwiches.</p>
+          <h3>Hearing a Set Before Walking Over</h3>
+          <p>I added a 15-second preview to Alex's card, using a prerecorded file that starts at the 11-second mark. The player includes play, pause, and a progress bar. This responds to the developer's concern about live audio streaming: a short stored clip is enough to demonstrate how someone could hear a sample before deciding to go. For now, Alex is the only musician with audio, and the sample is test content.</p>
+          <h3>Trying a Faster Tipping Flow</h3>
+          <p>I expanded the tipping popup with an Apple Pay-style screen. After choosing an amount, the listener sees a demo card and double-taps the confirmation area. A simulated Face ID animation leads to a success message. I wanted the interaction to give clear feedback without taking the listener away from the performance. It does not use the camera, authenticate a face, or charge money.</p>
+          <h3>Visual Alerts &amp; Small Fixes</h3>
+          <p>I kept the expanding red rings as the prototype's visual alert for nearby performances. They draw attention to activity while someone is looking at the map. This is my current interpretation of the arrival-alert idea; an opt-in notification when a new set begins nearby is still outside this version.</p>
+          <p>I also fixed broken characters in the payment screen and moved the desktop project title to the top left. It previously shifted vertically when I switched roles because the audience page was longer than the performer page.</p>
+          <h3>What I Want to Check Next</h3>
+          <p>The cards now give listeners more information, but they also take up more space. I want to see whether someone can find the preview and tipping action without being guided. I also want to check whether the grouped marker reads as two performances, and whether the payment confirmation is clear on a phone. These are questions for testing, rather than results I can claim yet.</p>
+          <h3>Prototype Screens</h3><p>Select a screenshot to view it at full size.</p>
         </div>
+        <div class="prototype-gallery">
+<figure><a href="assets/w5-2.png" target="_blank" rel="noopener" aria-label="View Distance Filter screenshot at full size (opens in a new tab)"><img src="assets/w5-2.png" alt="The compact range slider above the audience map, shown at 240m." loading="lazy" width="2048" height="1113"></a><figcaption><strong>Distance Filter</strong><br>The compact range slider above the audience map, shown at 240m.</figcaption></figure>
+<figure><a href="assets/w5-1.png" target="_blank" rel="noopener" aria-label="View Profile &amp; Audio Preview screenshot at full size (opens in a new tab)"><img src="assets/w5-1.png" alt="Alex&#x27;s audience card with genre tags, a short bio, an Instagram link, and a 15-second audio player." loading="lazy" width="2048" height="1113"></a><figcaption><strong>Profile &amp; Audio Preview</strong><br>Alex&#x27;s audience card with genre tags, a short bio, an Instagram link, and a 15-second audio player.</figcaption></figure>
+<figure><a href="assets/w5-3.png" target="_blank" rel="noopener" aria-label="View Simulated Apple Pay screenshot at full size (opens in a new tab)"><img src="assets/w5-3.png" alt="The demo payment screen with the tip amount and double-tap confirmation." loading="lazy" width="2048" height="1113"></a><figcaption><strong>Simulated Apple Pay</strong><br>The demo payment screen with the tip amount and double-tap confirmation.</figcaption></figure>
+<figure><a href="assets/w5-4.png" target="_blank" rel="noopener" aria-label="View Map Signals &amp; Layout screenshot at full size (opens in a new tab)"><img src="assets/w5-4.png" alt="The performer map with expanding red signals and the project title positioned at the top left." loading="lazy" width="2048" height="1111"></a><figcaption><strong>Map Signals &amp; Layout</strong><br>The performer map with expanding red signals and the project title positioned at the top left.</figcaption></figure>
+<figure><a href="assets/w5-5.png" target="_blank" rel="noopener" aria-label="View Musician Profile screenshot at full size (opens in a new tab)"><img src="assets/w5-5.png" alt="The performer profile with genre tags, Behind the Sound, and a sample Instagram link." loading="lazy" width="2048" height="1105"></a><figcaption><strong>Musician Profile</strong><br>The performer profile with genre tags, Behind the Sound, and a sample Instagram link.</figcaption></figure>
+        </div>
+      </section>
+      <section class="content-section" id="next-steps">
+        <header class="section-heading"><p class="section-number">07</p><div><p class="eyebrow">To Test</p><h2>Next Steps</h2></div></header>
+        <ul><li>Ask classmates to find a nearby set, play the preview, and complete a demo tip without instructions.</li><li>Check whether the distance slider and grouped marker are understood.</li><li>Review card length and the visibility of key actions on a phone.</li></ul>
       </section>
     </main>
   </div>
