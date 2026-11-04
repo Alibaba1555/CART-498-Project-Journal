@@ -59,7 +59,8 @@
         <a href="#week-03">Week 03</a>
         <a href="#week-04">Week 04</a>
         <a href="#week-05">Week 05</a>
-        <a href="#week-06" aria-current="page">Week 06</a>
+        <a href="#week-06">Week 06</a>
+        <a href="#week-07" aria-current="page">Week 07</a>
         <a href="#next-steps">Next Steps</a>
       </nav>
     </aside>
@@ -74,9 +75,9 @@
           discover them in real time.
         </p>
         <dl class="project-facts">
-          <div><dt>Current sprint</dt><dd>Moment Ticket, encore &amp; tipping</dd></div>
+          <div><dt>Current sprint</dt><dd>Map refinement &amp; live feedback</dd></div>
           <div><dt>Current stage</dt><dd>Interactive prototype iteration</dd></div>
-          <div><dt>Last updated</dt><dd>October 26, 2026</dd></div>
+          <div><dt>Last updated</dt><dd>November 3, 2026</dd></div>
         </dl>
       </section>
 
@@ -326,7 +327,7 @@
           <article class="card"><h3>Performer</h3><p>Start a set, choose a duration, and manage the remaining performance time.</p></article>
           <article class="card"><h3>Audience</h3><p>Browse the map, adjust the distance range, open a musician's card, listen to Alex's preview, and simulate a tip after connecting nearby.</p></article>
         </div>
-        <p class="note">Locations, walking, and payments are simulated. The preview plays a prerecorded audio file. Screenshots and design decisions are documented in <a href="#week-06">Week 06</a>.</p>
+        <p class="note">Locations, walking, and payments are simulated. The preview plays a prerecorded audio file. Screenshots and design decisions are documented in <a href="#week-07">Week 07</a>.</p>
       </section>
 
       <section class="content-section journal" id="week-01">
@@ -478,6 +479,35 @@
 <figure><a href="assets/w6-3.png" target="_blank" rel="noopener" aria-label="Audience actions — open full-size screenshot in a new tab"><img src="assets/w6-3.png" alt="Tipping, requesting an encore and saving a moment on Alex’s card." width="2048" height="1090" loading="lazy"></a><figcaption><strong>03 / Audience actions</strong><br>Tipping, requesting an encore and saving a moment on Alex’s card.</figcaption></figure>
 <figure><a href="assets/w6-4.png" target="_blank" rel="noopener" aria-label="Request an encore — open full-size screenshot in a new tab"><img src="assets/w6-4.png" alt="Choose up to 30 extra minutes and optionally suggest a song." width="2048" height="1097" loading="lazy"></a><figcaption><strong>04 / Request an encore</strong><br>Choose up to 30 extra minutes and optionally suggest a song.</figcaption></figure>
 <figure><a href="assets/w6-5.png" target="_blank" rel="noopener" aria-label="The performer decides — open full-size screenshot in a new tab"><img src="assets/w6-5.png" alt="Alex can read each request and accept or decline it." width="2048" height="1099" loading="lazy"></a><figcaption><strong>05 / The performer decides</strong><br>Alex can read each request and accept or decline it.</figcaption></figure>
+        </div>
+      </section>
+      <section class="content-section journal" id="week-07">
+        <header class="journal-heading"><div><p class="eyebrow">November 3, 2026</p><h2>Week 07</h2></div><span>Refining the Map &amp; Live Interactions</span></header>
+        <div class="journal-body">
+          <h3>Keeping the Part I Already Liked</h3>
+          <p>This week, I spent most of my time refining the prototype. I already liked the quiet colours and the overall layout, so I wanted to improve it without losing that feeling. The client feedback about bringing the map into the app's design system gave me a starting point. I worked on the buildings first, then moved through the artist cards and the live performance screen.</p>
+          <h3>The Map Got Too Crowded</h3>
+          <p>My first idea was to fill the grey blocks with more buildings and keep the white roads clear. It made the neighbourhood feel more complete, but I went too far. With so many similar tall buildings, I could barely see what was happening between them. I started thinking about the lower buildings around Chinatown and used more variation in height, width, and roof details. This is still an illustrative neighbourhood, not a reconstruction of Place des Arts btw.</p>
+          <p>I added two parks to open up the view and moved Mika's performance into one of them. At first the parks looked almost identical, so I gave the front one a fountain, added trees, and refined the benches. The fountain now has a small water animation. I also corrected buildings that appeared to overlap. After trying a closer initial camera view, I went back to the earlier angle because it gave a better overview. Adding more detail only helped when I could still read the map.</p>
+          <h3>Making the Interface Feel Consistent</h3>
+          <p>I adjusted the <strong>font sizes and weights</strong> so names, headings, and supporting text are easier to tell apart. I also gave the buttons clearer priorities and removed the small decorative arrows. I tried rounded cards, but they didn't feel right with the rest of the interface, so I returned the cards, buttons, and nearby artist list to straight corners. I kept the map markers and timer circular because those shapes have a different role.</p>
+          <p>On the artist card, I brought the existing 15-second preview out of the expandable profile area and made it more visible, with a small animated sound indicator. The biography and genre tags are still available below. I wanted someone to get a sense of the music before reading a whole profile.</p>
+          <h3>Giving the Timer a Response</h3>
+          <p>I removed the large ‘This is your moment.’ heading to give the live screen more space. I also replaced the +15-minute button with a <strong>double-tap on the timer</strong> that adds 10 minutes. When I tried clicking it, the numbers could become highlighted in blue, which interrupted the effect, so I made that text unselectable. The surrounding waves now react to a tap, and the inner circle briefly changes shape before settling back. I like that the timer responds, although I still need to check whether someone new to the app would discover the gesture.</p>
+          <h3>Turning Tips into Dealt Cards</h3>
+          <p>The tip jar went through a few versions. I wanted receiving a tip to feel noticeable, and the idea of dealing a playing card seemed more interesting than just changing a number. The first flip felt too flat, so I changed it into a card moving in, turning over, and landing slightly out of line with the cards underneath. Leaving the old corners visible makes it feel more like a small pile of cards.</p>
+          <p>I changed the wording to ‘<strong>Tips received</strong>’ and made the new amount larger. I originally showed the total on the card too, but it was repetitive, so I moved the running total to a fixed footer with a serif number style that fits the playing-card idea. Successful demo tips from the audience side now update Alex's jar in the same prototype. I also added a +$5 test button to the desktop controls so I can replay the effect easily.</p>
+          <h3>Keeping Requests Under Control</h3>
+          <p>I placed Encore requests and the tip jar next to each other below the timer. Previously, every request added another block of text, which made the left side keep growing. I changed it to show <strong>one pending request at a time</strong>, with previous and next controls, a position counter, and a separate History view. The performer can still accept or decline a request. With the total at the bottom of the tip panel, the two panels now line up more neatly.</p>
+          <h3>What Still Needs Work</h3>
+          <p>A lot of this week was trying something, seeing that it was too much, and pulling it back. The buildings, card animation, and typography all needed that. I am happier with how the prototype looks now, but I haven't tested these changes with other people yet. Next I want to check the double-tap gesture, whether the request controls are obvious, and whether the two panels remain readable on a phone. The client also asked for less separation between audience and performer accounts; the current role switch is still there, so that part needs more work. I also noticed the screenshot checklist still says +15 MIN, and that needs to match the new timer interaction.</p>
+          <h3>This Week’s Prototype</h3><p>Select a screenshot to view it at full size.</p>
+        </div>
+        <div class="prototype-gallery">
+<figure><a href="assets/w7-1.png" target="_blank" rel="noopener" aria-label="View Live Performance at full size (opens in a new tab)"><img src="assets/w7-1.png" alt="The responsive timer above the Encore request panel and the playing-card tip display." loading="lazy" width="2048" height="1104"></a><figcaption><strong>Live Performance</strong><br>The responsive timer above the Encore request panel and the playing-card tip display.</figcaption></figure>
+<figure><a href="assets/w7-2.png" target="_blank" rel="noopener" aria-label="View A More Open Neighbourhood at full size (opens in a new tab)"><img src="assets/w7-2.png" alt="Varied building heights, two parks, trees, and a fountain create more space around the performance areas." loading="lazy" width="2048" height="1099"></a><figcaption><strong>A More Open Neighbourhood</strong><br>Varied building heights, two parks, trees, and a fountain create more space around the performance areas.</figcaption></figure>
+<figure><a href="assets/w7-3.png" target="_blank" rel="noopener" aria-label="View Music First at full size (opens in a new tab)"><img src="assets/w7-3.png" alt="Alex’s preview is visible above the remaining time and audience actions." loading="lazy" width="2048" height="1101"></a><figcaption><strong>Music First</strong><br>Alex’s preview is visible above the remaining time and audience actions.</figcaption></figure>
+<figure><a href="assets/w7-4.png" target="_blank" rel="noopener" aria-label="View Profile Details at full size (opens in a new tab)"><img src="assets/w7-4.png" alt="Genre tags, a short introduction, and the sample Instagram link remain in the expandable artist profile." loading="lazy" width="2048" height="1104"></a><figcaption><strong>Profile Details</strong><br>Genre tags, a short introduction, and the sample Instagram link remain in the expandable artist profile.</figcaption></figure>
         </div>
       </section>
       <section class="content-section" id="next-steps">
