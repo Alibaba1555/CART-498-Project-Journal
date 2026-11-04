@@ -15,7 +15,10 @@
     .prototype-gallery figcaption { margin-top: .8rem; color: var(--muted); line-height: 1.65; }
     .prototype-gallery figcaption strong { color: var(--ink); }
     @media (max-width: 700px) { .prototype-gallery { grid-template-columns: 1fr; } }
-  </style>
+  
+/* Journal-only component studies; existing site styles are preserved. */
+.ui-studies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.ui-study{margin:0;min-width:0}.study-demo{padding:24px;min-height:300px;display:flex;flex-direction:column;border:1px solid #ccd7dd}.study-label{font-size:10px;letter-spacing:.16em;font-weight:700}.study-demo h3{font-size:38px;letter-spacing:-.04em;margin:30px 0 8px}.study-demo p{font-size:13px}.study-bars{font-size:26px;letter-spacing:3px;margin:auto 0 20px}.study-action{display:block;padding:12px;font-size:12px;text-align:center;font-weight:650}.study-quiet{background:#fff;color:#293747}.study-quiet .study-bars{color:#00879d}.study-quiet .study-action{background:#00879d;color:white}.study-warm{background:#fff3e4;color:#432d29;border-color:#e6beaa}.study-warm h3{font-weight:800}.study-warm .study-bars{color:#c24d38}.study-warm .study-action{background:#aa3c2a;color:#fff}.study-poster{background:#252526;color:#f7f3e9;border-color:#252526}.study-poster h3{text-transform:uppercase;font-size:52px;font-weight:900;line-height:1}.study-poster .study-bars{color:#d7ed83}.study-poster .study-action{background:#d7ed83;color:#252526}.ui-study figcaption{padding-top:18px;font-size:14px}.ui-study figcaption p{margin-top:8px;color:var(--muted)}@media(max-width:1100px){.ui-studies{grid-template-columns:1fr}.study-demo{min-height:260px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -51,7 +54,8 @@
         <a href="#assumptions">User Assumptions</a>
         <a href="#features">Features</a>
         <a href="#flow">User Flow</a>
-        <a href="#prototype">Current Prototype</a>
+        <a href="#prototype">Prototype at a Glance</a>
+        <a href="#ui-exploration">UI Exploration</a>
 
         <p class="nav-label">Weekly Journal</p>
         <a href="#week-01">Week 01</a>
@@ -198,7 +202,7 @@
               </div>
               <div class="persona-implication">
                 <span>Design implication</span>
-                <p>Save reusable profile details and keep location editing, +15 minutes, and End Performance directly accessible.</p>
+                <p>Save reusable profile details and keep location editing, time extension, and End Performance directly accessible.</p>
               </div>
             </article>
 
@@ -289,7 +293,7 @@
             <span><b class="priority core">Core</b></span><strong>Remaining Time</strong><span>As a performer, I want to see when my public listing will expire.</span>
           </div>
           <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>+15 Minutes</strong><span>As a performer, I want to extend the current performance without publishing again.</span>
+            <span><b class="priority core">Core</b></span><strong>Add 10 Minutes</strong><span>As a performer, I want to extend the current performance without publishing again.</span>
           </div>
           <div class="table-row" role="row">
             <span><b class="priority test">Test</b></span><strong>Pause / Resume</strong><span>As a performer, I want to reflect a short break without ending the entire session.</span>
@@ -315,19 +319,32 @@
           <li><span>02</span><div><strong>Confirm Location</strong><p>The current prototype uses a simulated location. Live location detection remains a future implementation.</p></div></li>
           <li><span>03</span><div><strong>Select Duration</strong><p>The performer chooses 30, 45, or 60 minutes.</p></div></li>
           <li><span>04</span><div><strong>Review and Go Live</strong><p>The location and duration are confirmed before publication.</p></div></li>
-          <li><span>05</span><div><strong>Manage the Session</strong><p>The live screen shows remaining time with options to add 15 minutes, pause, or end.</p></div></li>
+          <li><span>05</span><div><strong>Manage the Session</strong><p>The live screen shows remaining time with a double-tap gesture to add 10 minutes and controls to manage the session.</p></div></li>
           <li><span>06</span><div><strong>End Automatically or Manually</strong><p>The public pin is removed when the performer ends the session or the timer reaches zero.</p></div></li>
         </ol>
       </section>
 
       <section class="content-section" id="prototype">
-        <header class="section-heading"><p class="section-number">06</p><div><p class="eyebrow">Working Interaction</p><h2>Current Prototype</h2></div></header>
-        <p class="section-intro">The project has moved from early screen planning to a working browser prototype. The weekly entries below document the interface and the changes made along the way.</p>
-        <div class="card-grid">
-          <article class="card"><h3>Performer</h3><p>Start a set, choose a duration, and manage the remaining performance time.</p></article>
-          <article class="card"><h3>Audience</h3><p>Browse the map, adjust the distance range, open a musician's card, listen to Alex's preview, and simulate a tip after connecting nearby.</p></article>
+        <header class="section-heading"><p class="section-number">06</p><div><p class="eyebrow">Updated November 3, 2026 / Week 07</p><h2>Prototype at a Glance</h2></div></header>
+        <p class="section-intro">The current version connects finding a nearby set with listening, requesting an encore, saving a ticket, and supporting the musician. This overview describes the latest prototype; the weekly entries keep the earlier decisions and screenshots.</p>
+        <div class="card-grid four-columns">
+          <article class="card"><h3>Explore the neighbourhood</h3><p>A grey-and-white 3D map with varied buildings, two parks, trees, and an animated fountain. Listeners can filter nearby sets and simulate walking toward a performance.</p></article>
+          <article class="card"><h3>Listen &amp; take part</h3><p>Alex’s card places the 15-second preview above the main actions. Nearby listeners can simulate a tip, request an encore, and save a Moment Ticket.</p></article>
+          <article class="card"><h3>Manage a live set</h3><p>Double-tap the timer to add 10 minutes. Its waves react to the gesture. Below it, the performer reviews one pending encore request at a time and can open the request history.</p></article>
+          <article class="card"><h3>See support arrive</h3><p>A successful demo tip to Alex updates the performer’s total and deals a new playing card. The latest amount appears on the card; the running total stays below it.</p></article>
         </div>
-        <p class="note">Locations, walking, and payments are simulated. The preview plays a prerecorded audio file. Screenshots and design decisions are documented in <a href="#week-07">Week 07</a>.</p>
+        <p class="note">This is a browser prototype: walking, location, and payments are simulated. Tip updates occur within the same running prototype, not across devices. <a href="#week-07">See the latest screenshots and iteration notes.</a></p>
+      </section>
+
+      <section class="content-section" id="ui-exploration">
+        <header class="section-heading"><p class="section-number">UI</p><div><p class="eyebrow">Design study / Not implemented in the app</p><h2>Finding a Musical Character</h2></div></header>
+        <p class="section-intro">The feedback on Weeks 01–06 described the UI as too tame and closer to a B2B platform. I can see that in the repeated white panels and restrained typography. I still like the calm base, so I am comparing how much colour and rhythm I can introduce through the same artist-card component.</p>
+        <div class="ui-studies">
+          <figure class="ui-study"><div class="study-demo study-quiet"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>01 / Quiet baseline</strong><p>Cool cyan, generous space, and a light border. Closest to the current direction: easy to scan, but the music still feels secondary.</p></figcaption></figure>
+          <figure class="ui-study"><div class="study-demo study-warm"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>02 / Warm street session</strong><p>A cream surface, coral accent, and heavier artist name. The same structure feels warmer without asking every panel to compete for attention.</p></figcaption></figure>
+          <figure class="ui-study"><div class="study-demo study-poster"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>03 / Small gig poster</strong><p>Dark ink, lime, and oversized uppercase type. More expressive, but it could overpower the map and make a long list of artists tiring to browse.</p></figcaption></figure>
+        </div>
+        <div class="journal-body"><h3>What I would keep</h3><p>All three keep straight corners, the same information order, and one clear primary action. I am leaning toward trying the warmer version on the artist card first. The map can stay quieter, while the artist name, preview, and live status carry more personality. These are new visual studies for the journal; I have not tested or applied these colour variations to the prototype yet.</p><h3>Motion with a purpose</h3><p>The timer reaction and dealt tip cards are already implemented. They make an action feel acknowledged. I want to use that kind of response selectively rather than making every component move all the time.</p></div>
       </section>
 
       <section class="content-section journal" id="week-01">
@@ -484,6 +501,7 @@
       <section class="content-section journal" id="week-07">
         <header class="journal-heading"><div><p class="eyebrow">November 3, 2026</p><h2>Week 07</h2></div><span>Refining the Map &amp; Live Interactions</span></header>
         <div class="journal-body">
+          <h3>Looking Back at the Review</h3><p>The review of my work through Week 06 received 14.5/15. The testing controls and focused survey questions worked well, and the interactive journal was also a strength. The main criticism was that the app looked too restrained for live music. That gives me something more specific to work on: making the interface feel musical while keeping it readable. I added <a href="#ui-exploration">three visual directions</a> above to start comparing that balance.</p><p>The survey also needs clearer divisions. For the next round, I plan to group it into finding a performance, interacting as a listener, and managing a set, with the open comments at the end. Click counts and navigation paths could help later, but I have not added tracking. The teacher described that as optional, so my priority is the interface exploration and a clearer testing session.</p>
           <h3>Keeping the Part I Already Liked</h3>
           <p>This week, I spent most of my time refining the prototype. I already liked the quiet colours and the overall layout, so I wanted to improve it without losing that feeling. The client feedback about bringing the map into the app's design system gave me a starting point. I worked on the buildings first, then moved through the artist cards and the live performance screen.</p>
           <h3>The Map Got Too Crowded</h3>
@@ -512,7 +530,7 @@
       </section>
       <section class="content-section" id="next-steps">
         <header class="section-heading"><p class="section-number">07</p><div><p class="eyebrow">To Test</p><h2>Next Steps</h2></div></header>
-        <ul><li>Ask classmates to find a nearby set, play the preview, and complete a demo tip without instructions.</li><li>Check whether the distance slider and grouped marker are understood.</li><li>Review card length and the visibility of key actions on a phone.</li></ul>
+        <ul><li>Ask classmates to find a nearby set, play the preview, and complete a demo tip without instructions.</li><li>Compare the three artist-card directions: which feels musical, and which is easiest to read?</li><li>Divide the next survey into discovery, audience actions, and performer controls, followed by open comments.</li><li>Check whether people discover the timer gesture and can review multiple encore requests on a phone.</li></ul>
       </section>
     </main>
   </div>
