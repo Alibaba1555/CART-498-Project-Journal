@@ -50,7 +50,7 @@
         <p class="nav-label">Project</p>
         <a href="#overview">Overview</a>
         <a href="#pillars">Design Pillars</a>
-        <a href="#persona">Persona</a>
+        <a href="#persona">Personas</a>
         <a href="#assumptions">User Assumptions</a>
         <a href="#features">Features</a>
         <a href="#flow">User Flow</a>
@@ -74,15 +74,11 @@
       <section class="hero" id="overview">
         <p class="eyebrow">B2C Track · UX Design Journal</p>
         <h1>Live music,<br>around the corner.</h1>
-        <p class="lede">
-          Corner Set is a mobile platform that helps independent musicians
-          announce spontaneous public performances and helps nearby audiences
-          discover them in real time.
-        </p>
+        <p class="lede">Street musicians can put a live set on the map. Listeners can see who is playing nearby and whether they have time to walk over before the last song.</p>
         <dl class="project-facts">
-          <div><dt>Current sprint</dt><dd>Street routes, slide to go live &amp; themes</dd></div>
-          <div><dt>Current stage</dt><dd>Interactive prototype iteration</dd></div>
-          <div><dt>Last updated</dt><dd>November 10, 2026</dd></div>
+          <div><dt>Current sprint</dt><dd>Map previews, street routes &amp; themes</dd></div>
+          <div><dt>Current stage</dt><dd>Preparing for class review 03</dd></div>
+          <div><dt>Last updated</dt><dd>November 16, 2026</dd></div>
         </dl>
       </section>
 
@@ -92,33 +88,17 @@
           <div><p class="eyebrow">Foundation</p><h2>Design Pillars</h2></div>
         </header>
         <div class="card-grid four-columns">
-          <article class="card">
-            <p class="card-index">01</p>
-            <h3>Low-Friction Interaction</h3>
-            <p>Performers should be able to publish with very few actions while setting up their equipment.</p>
-          </article>
-          <article class="card">
-            <p class="card-index">02</p>
-            <h3>Clear Performance Status</h3>
-            <p>The interface should clearly show whether a performance is being configured, live, paused, or finished.</p>
-          </article>
-          <article class="card">
-            <p class="card-index">03</p>
-            <h3>Glanceable Information</h3>
-            <p>Remaining time and live status should be understandable during a quick look at the screen.</p>
-          </article>
-          <article class="card">
-            <p class="card-index">04</p>
-            <h3>Flexible Time Management</h3>
-            <p>Performers should be able to extend, pause, resume, or end a session without repeating setup.</p>
-          </article>
+          <article class="card"><h3>Start with the map</h3><p>Give musicians and listeners the same view of the neighbourhood when they arrive.</p></article>
+          <article class="card"><h3>Make going live feel deliberate</h3><p>A single slide starts the set. The transition lands on the running timer so the musician can see the set has started.</p></article>
+          <article class="card"><h3>Answer “Can I get there?”</h3><p>Keep the walk time and the time left together, right where a listener chooses an artist.</p></article>
+          <article class="card"><h3>Keep the music in the details</h3><p>Give the countdown, tip cards and Flyer type their own character. Keep directions and time labels easy to read.</p></article>
         </div>
       </section>
 
       <section class="content-section" id="persona">
         <header class="section-heading">
           <p class="section-number">02</p>
-          <div><p class="eyebrow">Primary, Secondary & Future Users</p><h2>User Personas</h2></div>
+          <div><p class="eyebrow">Musicians &amp; listeners</p><h2>User Personas</h2></div>
         </header>
 
         <div class="persona-carousel" data-persona-carousel>
@@ -165,7 +145,7 @@
               </div>
               <div class="persona-implication">
                 <span>Design implication</span>
-                <p>Prioritize a short setup flow, large controls, and clear confirmation that the performance is live.</p>
+                <p>Let Alex choose a duration and slide to go live. The running timer confirms the set has started.</p>
               </div>
             </article>
 
@@ -203,7 +183,7 @@
               </div>
               <div class="persona-implication">
                 <span>Design implication</span>
-                <p>Save reusable profile details and keep location editing, time extension, and End Performance directly accessible.</p>
+                <p>Let Maya extend a set from the timer or finish early so the listing reflects her plans.</p>
               </div>
             </article>
 
@@ -211,7 +191,7 @@
               <div class="persona-intro">
                 <div class="persona-avatar avatar-sofia" aria-hidden="true">S</div>
                 <div>
-                  <p class="eyebrow">Future Persona · Nearby Listener</p>
+                  <p class="eyebrow">Audience Persona · Nearby Listener</p>
                   <h3>Sofia, 22</h3>
                   <p>University student · Music enthusiast · Montreal</p>
                 </div>
@@ -241,7 +221,7 @@
               </div>
               <div class="persona-implication">
                 <span>Design implication</span>
-                <p>Show accurate distance, time, and live status; update changes immediately and remove expired performance pins.</p>
+                <p>Show Sofia the walk time and remaining set time above the pin so she can choose a show before leaving the map.</p>
               </div>
             </article>
           </div>
@@ -261,14 +241,11 @@
           <p class="section-number">03</p>
           <div><p class="eyebrow">To Be Tested</p><h2>User Assumptions</h2></div>
         </header>
-        <div class="note"><strong>Research status:</strong> These are initial assumptions. They have not yet been validated through user testing.</div>
+        <p class="section-intro">In the third class review, I want to check three decisions.</p>
         <ul class="assumption-list">
-          <li><span>01</span>Performers want to publish their current location as quickly as possible.</li>
-          <li><span>02</span>Fixed duration presets are easier than entering a start and end time manually.</li>
-          <li><span>03</span>Performers need to see the remaining time during a live session.</li>
-          <li><span>04</span>Some performers need to pause briefly and continue the same session.</li>
-          <li><span>05</span>Users may switch between Performer and Audience roles.</li>
-          <li><span>06</span>A double-tap gesture on Profile may be difficult for first-time users to discover.</li>
+          <li><span>01</span>When the slider reaches the end, performers can tell from the transition that their set is live.</li>
+          <li><span>02</span>Listeners can still tell which artist a preview belongs to when they rotate the map.</li>
+          <li><span>03</span>In Flyer, listeners can pick out the red performance markers among the lit windows.</li>
         </ul>
       </section>
 
@@ -277,36 +254,14 @@
           <p class="section-number">04</p>
           <div><p class="eyebrow">Performer &amp; Audience</p><h2>Feature List</h2></div>
         </header>
-        <div class="feature-table" role="table" aria-label="Feature priorities">
-          <div class="table-row table-head" role="row">
-            <span role="columnheader">Priority</span><span role="columnheader">Feature</span><span role="columnheader">User story</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>Confirm Location</strong><span>As a performer, I want to confirm my location so the audience can find the correct place.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>Select Duration</strong><span>As a performer, I want to choose 30, 45, or 60 minutes without entering a schedule manually.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>Go Live</strong><span>As a performer, I want to publish after reviewing the essential details.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>Remaining Time</strong><span>As a performer, I want to see when my public listing will expire.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority core">Core</b></span><strong>Add 10 Minutes</strong><span>As a performer, I want to extend the current performance without publishing again.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority test">Test</b></span><strong>Pause / Resume</strong><span>As a performer, I want to reflect a short break without ending the entire session.</span>
-          </div>
-          <div class="table-row" role="row">
-            <span><b class="priority test">Test</b></span><strong>Role Switching</strong><span>As a user, I want to change between Performer and Audience modes.</span>
-          </div>
-<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Nearby Discovery</strong><span>Filter demo performances from 50 to 300 metres, or select All. Nearby Leo and Nina markers group together when zoomed out.</span></div>
-<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Musician Profiles</strong><span>Read short bios, scan genre tags, and open sample Instagram links.</span></div>
-<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>15-Second Preview</strong><span>Listen to a prerecorded sample on Alex&#x27;s card before deciding to walk over.</span></div>
-<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Quick Tipping</strong><span>Choose a tip and complete an Apple Pay-style interaction with simulated Face ID feedback.</span></div>
-<div class="table-row" role="row"><span><b class="priority test">Prototype</b></span><strong>Visual Map Alerts</strong><span>Red expanding rings draw attention to performance areas while the map is open. Push notifications are not implemented.</span></div>
+        <div class="feature-table" role="table" aria-label="Prototype features">
+          <div class="table-row table-head" role="row"><span role="columnheader">Role</span><span role="columnheader">Feature</span><span role="columnheader">In the prototype</span></div>
+          <div class="table-row" role="row"><span role="cell">Performer</span><strong role="cell">Start and manage a set</strong><span role="cell">Choose 30, 45 or 60 minutes. Slide to start, double-tap the timer to add 10 minutes, or end the set.</span></div>
+          <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Compare nearby artists</strong><span role="cell">Filter the map by range. Tap a red marker to see the artist, walking time and time left. Open the card for more detail.</span></div>
+          <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Walk to the music</strong><span role="cell">The simulated walk follows streets and turns at intersections. Arriving near a set connects the listener automatically.</span></div>
+          <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Listen and take part</strong><span role="cell">Play Alex’s 15-second sample. Once nearby, send a demo tip, request an encore or save a Moment Ticket.</span></div>
+          <div class="table-row" role="row"><span role="cell">Performer</span><strong role="cell">Respond to the crowd</strong><span role="cell">Review encore requests and see tips arrive as playing cards in the tip jar.</span></div>
+          <div class="table-row" role="row"><span role="cell">Both</span><strong role="cell">Choose a theme</strong><span role="cell">Open Profile to choose Studio, Flyer or Vinyl. Flyer automatically uses the night map.</span></div>
         </div>
       </section>
 
@@ -315,37 +270,28 @@
           <p class="section-number">05</p>
           <div><p class="eyebrow">Task Structure</p><h2>Core User Flow</h2></div>
         </header>
-        <ol class="flow-list">
-          <li><span>01</span><div><strong>Enter Performer Mode</strong><p>The main navigation action becomes “Start a Performance.”</p></div></li>
-          <li><span>02</span><div><strong>Confirm Location</strong><p>The current prototype uses a simulated location. Live location detection remains a future implementation.</p></div></li>
-          <li><span>03</span><div><strong>Select Duration</strong><p>The performer chooses 30, 45, or 60 minutes.</p></div></li>
-          <li><span>04</span><div><strong>Review and Go Live</strong><p>The location and duration are confirmed before publication.</p></div></li>
-          <li><span>05</span><div><strong>Manage the Session</strong><p>The live screen shows remaining time with a double-tap gesture to add 10 minutes and controls to manage the session.</p></div></li>
-          <li><span>06</span><div><strong>End Automatically or Manually</strong><p>The public pin is removed when the performer ends the session or the timer reaches zero.</p></div></li>
-        </ol>
+        <div class="two-column-copy">
+          <div><h3>Performer</h3><ol><li>Open the map and choose <strong>Start a set</strong>.</li><li>Pick a duration and slide to go live.</li><li>Follow the timer. Extend the set or finish and return to the map.</li></ol></div>
+          <div><h3>Audience</h3><ol><li>Switch to Audience and tap a red marker.</li><li>Compare the walk time with the time left. Choose a set and start the simulated walk.</li><li>Connect on arrival, then save a ticket, tip or request an encore.</li></ol></div>
+        </div>
       </section>
 
       <section class="content-section" id="prototype">
-        <header class="section-heading"><p class="section-number">06</p><div><p class="eyebrow">Updated November 3, 2026 / Week 07</p><h2>Prototype at a Glance</h2></div></header>
-        <p class="section-intro">The current version connects finding a nearby set with listening, requesting an encore, saving a ticket, and supporting the musician. This overview describes the latest prototype; the weekly entries keep the earlier decisions and screenshots.</p>
-        <div class="card-grid four-columns">
-          <article class="card"><h3>Explore the neighbourhood</h3><p>A grey-and-white 3D map with varied buildings, two parks, trees, and an animated fountain. Listeners can filter nearby sets and simulate walking toward a performance.</p></article>
-          <article class="card"><h3>Listen &amp; take part</h3><p>Alex’s card places the 15-second preview above the main actions. Nearby listeners can simulate a tip, request an encore, and save a Moment Ticket.</p></article>
-          <article class="card"><h3>Manage a live set</h3><p>Double-tap the timer to add 10 minutes. Its waves react to the gesture. Below it, the performer reviews one pending encore request at a time and can open the request history.</p></article>
-          <article class="card"><h3>See support arrive</h3><p>A successful demo tip to Alex updates the performer’s total and deals a new playing card. The latest amount appears on the card; the running total stays below it.</p></article>
-        </div>
-        <p class="note">This is a browser prototype: walking, location, and payments are simulated. Tip updates occur within the same running prototype, not across devices. <a href="#week-08">See the latest screenshots and iteration notes.</a></p>
+        <header class="section-heading"><p class="section-number">06</p><div><p class="eyebrow">Interactive demo</p><h2>Prototype at a Glance</h2></div></header>
+        <p class="section-intro">Try the same corner in two themes. Start a set as a performer, then switch to Audience and find a show you can reach before it ends.</p>
+        <div class="two-column-copy"><div><h3>Studio</h3><p>A daylight map with pale buildings and teal controls.</p><a href="https://alibaba1555.github.io/CART-498-Prototype-Project-Corner-Set/?theme=studio">Open Studio ↗</a></div>
+          <div><h3>Flyer</h3><p>A night map with warm windows, fluorescent yellow type and pink accents.</p><a href="https://alibaba1555.github.io/CART-498-Prototype-Project-Corner-Set/?theme=flyer">Open Flyer ↗</a></div></div>
+        <p class="note">Location, walking and payments are simulated. <a href="#week-08">View the screenshots.</a></p>
       </section>
 
       <section class="content-section" id="ui-exploration">
-        <header class="section-heading"><p class="section-number">UI</p><div><p class="eyebrow">Design study / Not implemented in the app</p><h2>Finding a Musical Character</h2></div></header>
-        <p class="section-intro">The feedback on Weeks 01–06 described the UI as too tame and closer to a B2B platform. I can see that in the repeated white panels and restrained typography. I still like the calm base, so I am comparing how much colour and rhythm I can introduce through the same artist-card component.</p>
-        <div class="ui-studies">
-          <figure class="ui-study"><div class="study-demo study-quiet"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>01 / Quiet baseline</strong><p>Cool cyan, generous space, and a light border. Closest to the current direction: easy to scan, but the music still feels secondary.</p></figcaption></figure>
-          <figure class="ui-study"><div class="study-demo study-warm"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>02 / Warm street session</strong><p>A cream surface, coral accent, and heavier artist name. The same structure feels warmer without asking every panel to compete for attention.</p></figcaption></figure>
-          <figure class="ui-study"><div class="study-demo study-poster"><span class="study-label">LIVE / NEARBY</span><h3>Alex</h3><p>Acoustic · Guitar &amp; vocals</p><div class="study-bars" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▅</div><span class="study-action">Listen to a preview</span></div><figcaption><strong>03 / Small gig poster</strong><p>Dark ink, lime, and oversized uppercase type. More expressive, but it could overpower the map and make a long list of artists tiring to browse.</p></figcaption></figure>
+        <header class="section-heading"><p class="section-number">UI</p><div><p class="eyebrow">From visual studies to themes</p><h2>Finding a Musical Character</h2></div></header>
+        <p class="section-intro">My teacher said the early interface felt like a banking app. I kept its quiet layout for Studio and tried the scale and colour of a gig poster for Flyer. Vinyl uses moss green, cream and serif headings.</p>
+        <div class="prototype-gallery">
+          <figure><a href="assets/w8-4.png"><img src="assets/w8-4.png" loading="lazy" alt="Studio, Flyer and Vinyl theme choices in Profile."></a><figcaption><strong>One profile, three themes</strong><br>The swatches let listeners compare palettes before choosing.</figcaption></figure>
+          <figure><a href="assets/w8-5.png"><img src="assets/w8-5.png" loading="lazy" alt="Fluorescent lettering above a navy map with illuminated windows."></a><figcaption><strong>Flyer after dark</strong><br>I opened up the spacing in the heavy lettering and kept the theme in night mode.</figcaption></figure>
         </div>
-        <div class="journal-body"><h3>What I would keep</h3><p>All three keep straight corners, the same information order, and one clear primary action. I am leaning toward trying the warmer version on the artist card first. The map can stay quieter, while the artist name, preview, and live status carry more personality. These are new visual studies for the journal; I have not tested or applied these colour variations to the prototype yet.</p><h3>Motion with a purpose</h3><p>The timer reaction and dealt tip cards are already implemented. They make an action feel acknowledged. I want to use that kind of response selectively rather than making every component move all the time.</p></div>
+        <p class="note">I tried coloured trails behind the slider, but my eye followed the trail while I was dragging. The final handle is a plain square. The colour arrives when the slide finishes and the timer appears.</p>
       </section>
 
       <section class="content-section journal" id="week-01">
@@ -553,7 +499,7 @@
       </section>
       <section class="content-section" id="next-steps">
         <header class="section-heading"><p class="section-number">07</p><div><p class="eyebrow">To Test</p><h2>Next Steps</h2></div></header>
-        <ul><li>Ask classmates to find a nearby set, play the preview, and complete a demo tip without instructions.</li><li>Compare the three artist-card directions: which feels musical, and which is easiest to read?</li><li>Divide the next survey into discovery, audience actions, and performer controls, followed by open comments.</li><li>Check whether people discover the timer gesture and can review multiple encore requests on a phone.</li></ul>
+        <ul><li>Ask classmates to start a set and describe the transition to the timer.</li><li>Watch how they compare artists and follow a route as they rotate the map.</li><li>Check marker visibility in Flyer and collect one change classmates would make.</li></ul>
       </section>
     </main>
   </div>
