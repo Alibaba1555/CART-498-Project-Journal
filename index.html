@@ -65,7 +65,8 @@
         <a href="#week-05">Week 05</a>
         <a href="#week-06">Week 06</a>
         <a href="#week-07">Week 07</a>
-        <a href="#week-08" aria-current="page">Week 08</a>
+        <a href="#week-08">Week 08</a>
+        <a href="#week-09" aria-current="page">Week 09</a>
         <a href="#next-steps">Next Steps</a>
       </nav>
     </aside>
@@ -76,9 +77,9 @@
         <h1>Live music,<br>around the corner.</h1>
         <p class="lede">Street musicians can put a live set on the map. Listeners can see who is playing nearby and whether they have time to walk over before the last song.</p>
         <dl class="project-facts">
-          <div><dt>Current sprint</dt><dd>Map previews, street routes &amp; themes</dd></div>
-          <div><dt>Current stage</dt><dd>Preparing for class review 03</dd></div>
-          <div><dt>Last updated</dt><dd>November 16, 2026</dd></div>
+          <div><dt>Current sprint</dt><dd>A map home screen and a one-handed menu</dd></div>
+          <div><dt>Current stage</dt><dd>Revised after class review 03</dd></div>
+          <div><dt>Last updated</dt><dd>November 17, 2026</dd></div>
         </dl>
       </section>
 
@@ -89,7 +90,7 @@
         </header>
         <div class="card-grid four-columns">
           <article class="card"><h3>Start with the map</h3><p>Give musicians and listeners the same view of the neighbourhood when they arrive.</p></article>
-          <article class="card"><h3>Make going live feel deliberate</h3><p>A single slide starts the set. The transition lands on the running timer so the musician can see the set has started.</p></article>
+          <article class="card"><h3>Start a set with one hand</h3><p>Put Start live in the lower-right menu. A slide confirms the start and opens the timer.</p></article>
           <article class="card"><h3>Answer “Can I get there?”</h3><p>Keep the walk time and the time left together, right where a listener chooses an artist.</p></article>
           <article class="card"><h3>Keep the music in the details</h3><p>Give the countdown, tip cards and Flyer type their own character. Keep directions and time labels easy to read.</p></article>
         </div>
@@ -241,11 +242,11 @@
           <p class="section-number">03</p>
           <div><p class="eyebrow">To Be Tested</p><h2>User Assumptions</h2></div>
         </header>
-        <p class="section-intro">In the third class review, I want to check three decisions.</p>
+        <p class="section-intro">Three things I still want to test on a phone.</p>
         <ul class="assumption-list">
-          <li><span>01</span>When the slider reaches the end, performers can tell from the transition that their set is live.</li>
+          <li><span>01</span>A musician holding an instrument can open Menu and start a set with their free hand.</li>
           <li><span>02</span>Listeners can still tell which artist a preview belongs to when they rotate the map.</li>
-          <li><span>03</span>In Flyer, listeners can pick out the red performance markers among the lit windows.</li>
+          <li><span>03</span>Listeners notice the arrival message and know they can tap it to open the set.</li>
         </ul>
       </section>
 
@@ -256,9 +257,9 @@
         </header>
         <div class="feature-table" role="table" aria-label="Prototype features">
           <div class="table-row table-head" role="row"><span role="columnheader">Role</span><span role="columnheader">Feature</span><span role="columnheader">In the prototype</span></div>
-          <div class="table-row" role="row"><span role="cell">Performer</span><strong role="cell">Start and manage a set</strong><span role="cell">Choose 30, 45 or 60 minutes. Slide to start, double-tap the timer to add 10 minutes, or end the set.</span></div>
+          <div class="table-row" role="row"><span role="cell">Performer</span><strong role="cell">Start and manage a set</strong><span role="cell">Open Menu and tap Start live. Choose 30, 45 or 60 minutes. Slide to start, double-tap the timer to add 10 minutes, or end the set.</span></div>
           <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Compare nearby artists</strong><span role="cell">Filter the map by range. Tap a red marker to see the artist, walking time and time left. Open the card for more detail.</span></div>
-          <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Walk to the music</strong><span role="cell">The simulated walk follows streets and turns at intersections. Arriving near a set connects the listener automatically.</span></div>
+          <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Walk to the music</strong><span role="cell">The simulated walk follows streets and turns at intersections. On arrival, a message names the nearby artist. Tap it to open their set over the map.</span></div>
           <div class="table-row" role="row"><span role="cell">Audience</span><strong role="cell">Listen and take part</strong><span role="cell">Play Alex’s 15-second sample. Once nearby, send a demo tip, request an encore or save a Moment Ticket.</span></div>
           <div class="table-row" role="row"><span role="cell">Performer</span><strong role="cell">Respond to the crowd</strong><span role="cell">Review encore requests and see tips arrive as playing cards in the tip jar.</span></div>
           <div class="table-row" role="row"><span role="cell">Both</span><strong role="cell">Choose a theme</strong><span role="cell">Open Profile to choose Studio, Flyer or Vinyl. Flyer automatically uses the night map.</span></div>
@@ -271,8 +272,8 @@
           <div><p class="eyebrow">Task Structure</p><h2>Core User Flow</h2></div>
         </header>
         <div class="two-column-copy">
-          <div><h3>Performer</h3><ol><li>Open the map and choose <strong>Start a set</strong>.</li><li>Pick a duration and slide to go live.</li><li>Follow the timer. Extend the set or finish and return to the map.</li></ol></div>
-          <div><h3>Audience</h3><ol><li>Switch to Audience and tap a red marker.</li><li>Compare the walk time with the time left. Choose a set and start the simulated walk.</li><li>Connect on arrival, then save a ticket, tip or request an encore.</li></ol></div>
+          <div><h3>Performer</h3><ol><li>Open <strong>Menu</strong> at the bottom right and tap <strong>Start live</strong>.</li><li>Pick a duration and slide to go live.</li><li>Follow the timer. Extend the set or finish and return to the map.</li></ol></div>
+          <div><h3>Audience</h3><ol><li>Choose Switch to audience from Menu and tap a red marker.</li><li>Compare the walk time with the time left. Choose a set and start the simulated walk.</li><li>Tap the arrival message to open the artist’s card. Leave a tip or save a ticket.</li></ol></div>
         </div>
       </section>
 
@@ -281,7 +282,7 @@
         <p class="section-intro">Try the same corner in two themes. Start a set as a performer, then switch to Audience and find a show you can reach before it ends.</p>
         <div class="two-column-copy"><div><h3>Studio</h3><p>A daylight map with pale buildings and teal controls.</p><a href="https://alibaba1555.github.io/CART-498-Prototype-Project-Corner-Set/?theme=studio">Open Studio ↗</a></div>
           <div><h3>Flyer</h3><p>A night map with warm windows, fluorescent yellow type and pink accents.</p><a href="https://alibaba1555.github.io/CART-498-Prototype-Project-Corner-Set/?theme=flyer">Open Flyer ↗</a></div></div>
-        <p class="note">Location, walking and payments are simulated. <a href="#week-08">View the screenshots.</a></p>
+        <p class="note">Location, walking and payments are simulated. <a href="#week-09">See the map and menu.</a></p>
       </section>
 
       <section class="content-section" id="ui-exploration">
@@ -497,9 +498,40 @@
           <figure><a href="assets/w8-7.png" target="_blank" rel="noopener"><img src="assets/w8-7.png" width="2048" height="1018" loading="lazy" alt="Alex’s artist card puts walk time beside the live countdown."></a><figcaption><strong>Comparing times</strong><br>Alex’s artist card puts walk time beside the live countdown.</figcaption></figure>
         </div>
       </section>
+      <section class="content-section journal" id="week-09">
+        <header class="journal-heading"><div><p class="eyebrow">November 17, 2026</p><h2>Week 09</h2></div><span>One Hand on the Phone</span></header>
+        <div class="journal-body">
+          <h3>What I took from the class review</h3>
+          <p>One classmate asked whether Corner Set was supposed to be a desktop app or a phone app. Someone else said they would not have figured out how to switch between Performer and Audience without instructions. At the same time, people liked the role transition, the slider for starting a set, the walking simulation and the tipping animation. I wanted to keep those moments and make them easier to find from inside the phone screen.</p>
+
+          <h3>Designing around my right thumb</h3>
+          <p>I’m right-handed, so I paid attention to where my thumb rests when I hold my phone. I pictured a performer holding a guitar in their other hand and needing to start a set without putting it down. My goal was for them to use the main controls with one hand, from opening the app to starting a performance.</p>
+          <p>I made the 3D map fill the home screen and put <strong>Menu</strong> in the bottom-right corner. It opens upward with four labelled icons for Start live, Switch to audience, Dark mode and My profile. The icon for switching back to Light mode is now a sun. I adjusted the menu animation so the options come in smoothly and went back to the earlier role transition, with a little more time for it to play. I also took the empty Encore requests panel off the idle home screen. A performer can deal with requests once there is a live set. Starting a set still uses the duration picker and the slide gesture that classmates liked.</p>
+
+          <h3>From a red pin to a performance</h3>
+          <p>In the previous audience view, the map was followed by a long list of artist information. I could imagine that getting hard to scan if several people were playing close together. The new audience home is centred on the map. I can adjust the range, zoom into a group of pins and tap an individual red pin. The small preview puts the artist’s name, walking time and remaining set time together so I can decide whether to head over.</p>
+          <p>When I finish the simulated walk to Mika, a small <strong>“You’re near Mika”</strong> message appears above Menu. I can choose when to open it. The detailed card floats over the map with space around its edges. I made the avatar round to match Profile, put the two time values side by side and grouped the tip and save actions underneath. The bio, genre tags and social link fit under About the artist. I also rewrote the demo checklist so someone can try this sequence without me talking them through it.</p>
+
+          <h3>Giving Place des Arts a waterfront</h3>
+          <p>I tried filling out the edge of the map with more buildings. That version felt crowded, especially in front of the red performance marker. I kept the original blocks and fountain but broke up the building rows with a market roof, a rooftop water tank and open spaces. I extended the street grid into the outer blocks and connected the park to a waterfront with a basketball court, a promenade and a small 3D pier. The open foreground gives listeners a clearer view toward the performance area.</p>
+          <p>I replaced some hard-to-read waterfront props with food stalls and park benches. The striped stall roofs used to flicker when I rotated the map, so I attached the stripes to the roof surface. Across from the fountain, I added a small street music corner with semicircular paving, a curved bench and a Live Sets sign. The path to the pier stays clear. The long building by the court now has a red <strong>CORNER SET</strong> rooftop sign inspired by Montréal’s Five Roses sign.</p>
+
+          <h3>Motion and the finishing details</h3>
+          <p>The first river lines looked scattered and stiff, so I redrew them as longer, shallow currents that drift along the shore. The fountain still runs, a little smoke rises from a rooftop chimney and a loose flock of small 3D pigeons occasionally crosses the neighbourhood and disappears. I matched the opening map angle to Reset so both return to the same framing around the performance marker. I also redrew the logo as a transparent vector for light and dark mode and used a thin line to separate the header from the map.</p>
+          
+        </div>
+        <div class="prototype-gallery">
+          <figure><a href="assets/w9-home.png" target="_blank" rel="noopener"><img src="assets/w9-home.png" alt="The waterfront, rooftop sign and Menu share one map." width="2048" height="1024" loading="lazy"></a><figcaption><strong>The performer’s home screen</strong><br>The waterfront, rooftop sign and Menu share one map.</figcaption></figure>
+          <figure><a href="assets/w9-menu.png" target="_blank" rel="noopener"><img src="assets/w9-menu.png" alt="Four labelled actions open above the lower-right button." width="2048" height="1019" loading="lazy"></a><figcaption><strong>Opening Menu</strong><br>Four labelled actions open above the lower-right button.</figcaption></figure>
+          <figure><a href="assets/w9-pin.png" target="_blank" rel="noopener"><img src="assets/w9-pin.png" alt="Mika’s pin shows a four-minute walk and 33 minutes left." width="2048" height="1020" loading="lazy"></a><figcaption><strong>Choosing a set</strong><br>Mika’s pin shows a four-minute walk and 33 minutes left.</figcaption></figure>
+          <figure><a href="assets/w9-walk.png" target="_blank" rel="noopener"><img src="assets/w9-walk.png" alt="Walk to this set is available while Mika is still four minutes away." width="2048" height="1018" loading="lazy"></a><figcaption><strong>Before the walk</strong><br>Walk to this set is available while Mika is still four minutes away.</figcaption></figure>
+          <figure><a href="assets/w9-arrival.png" target="_blank" rel="noopener"><img src="assets/w9-arrival.png" alt="A small arrival message appears above Menu." width="2048" height="1021" loading="lazy"></a><figcaption><strong>Arriving near Mika</strong><br>A small arrival message appears above Menu.</figcaption></figure>
+          <figure><a href="assets/w9-card.png" target="_blank" rel="noopener"><img src="assets/w9-card.png" alt="Mika’s floating card shows the tip and save actions with About the artist expanded." width="2048" height="1020" loading="lazy"></a><figcaption><strong>At the set</strong><br>Mika’s floating card shows the tip and save actions with About the artist expanded.</figcaption></figure>
+        </div>
+      </section>
       <section class="content-section" id="next-steps">
         <header class="section-heading"><p class="section-number">07</p><div><p class="eyebrow">To Test</p><h2>Next Steps</h2></div></header>
-        <ul><li>Ask classmates to start a set and describe the transition to the timer.</li><li>Watch how they compare artists and follow a route as they rotate the map.</li><li>Check marker visibility in Flyer and collect one change classmates would make.</li></ul>
+        <ul><li>Depend on the results of the previous tests.</li><li>Think about the same task with someone who holds their phone in their left hand.</li><li>Have a listener walk to Mika and see whether they open the arrival message without a hint.</li></ul>
       </section>
     </main>
   </div>
